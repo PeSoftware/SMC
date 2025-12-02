@@ -61,12 +61,8 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
-
-          <!-- Task pane -->
           <ExtensionPoint xsi:type="MessageReadTaskPane">
-            <DesktopFormFactor>
-              <SourceLocation resid="TaskpaneUrl"/>
-            </DesktopFormFactor>
+            <SourceLocation resid="TaskpaneUrl"/>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
