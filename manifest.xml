@@ -39,7 +39,6 @@
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
-          <FunctionFile resid="CommandsUrl"/>
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="grpSaveEmail" label="Bookings">
@@ -54,8 +53,8 @@
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>onShowSaveEmail</FunctionName>
+                  <Action xsi:type="ShowTaskPane">
+                    <SourceLocation resid="TaskpaneUrl"/>
                   </Action>
                 </Control>
               </Group>
@@ -77,7 +76,6 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="TaskpaneUrl" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/taskpane.html"/>
-        <bt:Url id="CommandsUrl" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/commands.js"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="ButtonLabel" DefaultValue="Save to booking"/>
