@@ -1,51 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appframework/1.1"
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-           xsi:type="MailApp"
-           Version="1.1">
-  <!-- Basic identity -->
+           xsi:type="MailComposeCommandSurfaceExtension">
   <Id>12345678-1234-5678-90ab-cdefabcd1234</Id>
   <DisplayName DefaultValue="SMC: Save Email to Booking"/>
   <ProviderName DefaultValue="Specialist Mind Care"/>
   <DefaultLocale>en-US</DefaultLocale>
 
-  <!-- Host and requirements -->
   <Hosts>
-    <Host Name="Mailbox"/>
+    <Host xsi:type="MailHost"/>
   </Hosts>
+
   <Requirements>
     <Sets DefaultMinVersion="1.10">
       <Set Name="Mailbox"/>
     </Sets>
   </Requirements>
 
-  <!-- Permissions -->
   <Permissions>ReadWriteItem</Permissions>
 
-  <!-- AppDomains -->
   <AppDomains>
     <AppDomain>https://delightful-water-09c75de00.3.azurestaticapps.net</AppDomain>
   </AppDomains>
 
-  <!-- VersionOverrides for ribbon and task pane -->
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
-    <Requirements>
-      <Sets DefaultMinVersion="1.10">
-        <Set Name="Mailbox"/>
-      </Sets>
-    </Requirements>
-
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xsi:type="VersionOverridesV1_0">
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="grpSaveEmail" label="Bookings">
                 <Control xsi:type="Button" id="btnSaveToBooking">
                   <Label resid="ButtonLabel"/>
                   <Supertip>
-                    <Title resid="ButtonLabel"/>
+                    <Title resid="ButtonTitle"/>
                     <Description resid="ButtonDescription"/>
                   </Supertip>
                   <Icon>
@@ -60,14 +49,10 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
-          <ExtensionPoint xsi:type="MessageReadTaskPane">
-            <SourceLocation resid="TaskpaneUrl"/>
-          </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
     </Hosts>
 
-    <!-- Resources -->
     <Resources>
       <bt:Images>
         <bt:Image id="Icon.16x16" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/assets/icon_return.png"/>
@@ -79,6 +64,7 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="ButtonLabel" DefaultValue="Save to booking"/>
+        <bt:String id="ButtonTitle" DefaultValue="Save to booking"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="ButtonDescription" DefaultValue="Save the current email to the booking system"/>
