@@ -5,7 +5,7 @@
            xsi:type="MailApp"
            Version="1.1">
   <!-- Basic identity -->
-  <Id>e6a0b5e6-9876-4cde-8abc-abcdefabcdef</Id>
+  <Id>12345678-1234-5678-90ab-cdefabcd1234</Id>
   <DisplayName DefaultValue="SMC: Save Email to Booking"/>
   <ProviderName DefaultValue="Specialist Mind Care"/>
   <DefaultLocale>en-US</DefaultLocale>
