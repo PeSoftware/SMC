@@ -15,7 +15,9 @@
 
   <Permissions>ReadWriteItem</Permissions>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xsi:type="VersionOverridesV1_0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+                    xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+                    xsi:type="VersionOverridesV1_0">
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
@@ -45,7 +47,7 @@
       </Host>
     </Hosts>
     <Resources>
-      <bt:Urls xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0">
+      <bt:Urls>
         <bt:Url id="TaskpaneUrl" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/taskpane.html"/>
         <bt:Url id="FunctionFileUrl" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/commands.js"/>
       </bt:Urls>
