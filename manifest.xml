@@ -33,15 +33,6 @@
               <Group id="grpSaveEmail" label="Bookings">
                 <Control xsi:type="Button" id="btnSaveToBooking">
                   <Label resid="ButtonLabel"/>
-                  <Supertip>
-                    <Title resid="ButtonTitle"/>
-                    <Description resid="ButtonDescription"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
-                  </Icon>
                   <Action xsi:type="ShowTaskPane">
                     <SourceLocation resid="TaskpaneUrl"/>
                   </Action>
@@ -54,21 +45,12 @@
     </Hosts>
 
     <Resources>
-      <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/assets/icon_return.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/assets/icon_return.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/assets/icon_return.png"/>
-      </bt:Images>
       <bt:Urls>
         <bt:Url id="TaskpaneUrl" DefaultValue="https://delightful-water-09c75de00.3.azurestaticapps.net/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="ButtonLabel" DefaultValue="Save to booking"/>
-        <bt:String id="ButtonTitle" DefaultValue="Save to booking"/>
       </bt:ShortStrings>
-      <bt:LongStrings>
-        <bt:String id="ButtonDescription" DefaultValue="Save the current email to the booking system"/>
-      </bt:LongStrings>
     </Resources>
   </VersionOverrides>
 </OfficeApp>
